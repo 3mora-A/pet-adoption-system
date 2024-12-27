@@ -1,5 +1,4 @@
 :root {
-  /* CSS Variables */
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -41,12 +40,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  position: relative; /* Ensures the section can appear below the background image */
-  z-index: 1; /* Ensures that the background image is beneath the section */
+  position: relative;
+  z-index: 1;
 }
 
 .photo {
-  position: relative; /* يتيح لك وضع العناصر داخل الصورة */
+  position: relative;
 }
 
 .img-dog {
@@ -55,12 +54,11 @@ body {
 }
 
 .col-12 {
-display: flex;
-gap: 50px;
-justify-content: center;
-margin-top: 100px;
-margin-bottom:100px ;
-
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .heroButton {
@@ -69,14 +67,14 @@ margin-bottom:100px ;
   margin: 20px 0;
   max-width: 500px;
   padding: 20px;
-  background-color:#28a745 ;
+  background-color: #28a745;
   border: 2px solid var(--gray);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   transform: scale(1);
   color: var(--light);
-  z-index: 3; /* يجعل الأزرار تظهر فوق الخلفية */
+  z-index: 3;
 }
 
 .heroButton__anchor {
@@ -88,20 +86,18 @@ margin-bottom:100px ;
   height: 100%;
   z-index: 1;
   border-radius: 8px;
-  transition: all 0.3s ease; /* انتقال سلس */
+  transition: all 0.3s ease;
 }
 
-/* تأثير عند التمرير */
 .heroButton__anchor:hover {
-  transform: scale(1.1); /* تكبير الأزرار قليلاً عند التمرير */
-  background-color: rgba(0, 0, 0, 0.15); /* خلفية داكنة أخف عند التمرير */
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15); /* إضافة ظل لمزيد من العمق */
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* تأثير عند الضغط */
 .heroButton__anchor:active {
-  transform: scale(0.95); /* تصغير الأزرار عند الضغط */
-  background-color: rgba(0, 0, 0, 0.2); /* خلفية داكنة عند الضغط */
+  transform: scale(0.95);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .heroButton__wrapper {
@@ -114,173 +110,146 @@ margin-bottom:100px ;
   max-width: 120px;
   height: auto;
   padding: 10px;
-  background-color: var(--green); /* إضافة خلفية خضراء */
-  border-radius: 8px; /* حواف مستديرة للصورة */
+  background-color: var(--green);
+  border-radius: 8px;
 }
 
 .heroButton__content {
   text-align: left;
-  
 }
 
 .heroButton__content h3 {
   margin: 0;
-  font-size: 1.6rem; /* زيادة حجم الخط */
+  font-size: 1.6rem;
   font-weight: bold;
-  color: black; /* لون أكثر وضوحًا */
+  color: black;
 }
 
 .heroButton__content p {
-  margin: 8px 0 0; /* إضافة مساحة بين العنوان والنص */
-  font-size: 1.1rem; /* حجم خط أكبر */
+  margin: 8px 0 0;
+  font-size: 1.1rem;
   color: var(--gray-dark);
-  line-height: 1.6; /* زيادة ارتفاع السطر */
+  line-height: 1.6;
 }
 
-
-
-
-
-/* تغيير ترتيب العناصر في .description لتكون بجانب بعض */
 .description {
-  margin-top:50px ;
-  display: flex; /* استخدام flexbox */
-  flex-direction: row; /* ترتيب العناصر بشكل أفقي */
-  gap: 200px; /* المسافة بين العناصر */
-  justify-content: center; /* محاذاة العناصر في المنتصف */
-  flex-wrap: wrap; /* يسمح بانتقال العناصر إلى السطر التالي إذا لم يكن هناك مساحة كافية */
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* تصميم العنصر داخل .des */
 .des {
   display: flex;
-  flex-direction: column; /* ترتيب المحتوى داخل .des بشكل عمودي */
-  align-items: center; /* محاذاة المحتوى في الوسط */
-  text-align: center; /* جعل النص في المنتصف */
-  background-color: #f9f9f9; /* خلفية فاتحة */
-  border: 1px solid #ddd; /* تحديد الحدود */
-  padding: 20px; /* المسافات داخل البوكس */
-  border-radius: 10px; /* زوايا دائرية */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
-  
-  width: auto; /* العرض يتناسب مع المحتوى */
-  max-width: 350px; /* الحد الأقصى للعرض */
-  
-  transition: transform 0.3s ease-in-out; /* تأثير التحويل عند التمرير */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+  max-width: 350px;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* تأثير التمرير على العنصر */
 .des:hover {
-  transform: translateY(-5px); /* تأثير عند التمرير فوق البوكس */
+  transform: translateY(-5px);
 }
 
-/* تصميم الصورة داخل .des */
 .des img {
-  width: 150px; /* تحديد عرض الصورة */
-  height: 150px; /* تحديد ارتفاع الصورة */
-  margin-bottom: 15px; /* المسافة بين الصورة والنص */
-  background-color: #28a745; /* خلفية خضراء */
-  border-radius: 50%; /* جعل الصورة دائرية */
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+  background-color: #28a745;
+  border-radius: 50%;
 }
 
-/* تصميم القسم التفاصيل داخل .des */
-.details h4  {
+.details h4 {
   padding: 10px;
-  color:black ;
+  color: black;
 }
-.details p  {
+
+.details p {
   padding: 10px;
-  color:var(--gray-dark) ;
+  color: var(--gray-dark);
   font-size: large;
   font: var(--font-family-monospace);
 }
-.start-partners p{
-  color:black;
 
-
+.start-partners p {
+  color: black;
 }
-/* تنسيق العناوين داخل .des */
+
 h4 {
-  font-size: 1.2em; /* تكبير حجم العنوان */
+  font-size: 1.2em;
   margin-bottom: 10px;
-  color: #333; /* تغيير لون العنوان */
+  color: #333;
 }
 
-/* تنسيق القائمة */
 ul {
-  list-style-type: none; /* إزالة الرموز النقطية */
-  padding-left: 0; /* إزالة المسافة الداخلية في القائمة */
+  list-style-type: none;
+  padding-left: 0;
 }
 
 ul li {
-  margin-bottom: 5px; /* المسافة بين العناصر في القائمة */
+  margin-bottom: 5px;
 }
 
 section {
-  background-color: var(--purple); /* يمكن تغيير الخلفية إلى اللون الذي تفضله */
-  padding: 50px 15px; /* المسافات الداخلية حول المحتوى */
-  margin-top: 20px; /* المسافة بين القسم والجزء العلوي */
-  display: flex; /* جعل المحتوى يظهر باستخدام Flexbox */
-  flex-direction: column; /* ترتيب المحتوى بشكل عمودي */
-  align-items: center; /* محاذاة المحتوى في الوسط */
-  justify-content: center; /* محاذاة العناصر أفقياً في المنتصف */
-  text-align: center; /* جعل النص في المنتصف */
-  border-radius: 10px; /* زوايا دائرية للقسم */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للقسم */
-  
+  background-color: var(--purple);
+  padding: 50px 15px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 section h4 {
-  font-size: 40px; /* Increased font size */
-  color: black;  /* Keep the text color as dark */
+  font-size: 40px;
+  color: black;
   margin-bottom: 0px;
 }
 
-
-
-
-
 section p {
-  font-size: 1.2rem; /* حجم الخط للنصوص */
-  color: var(--light); /* لون النص الأساسي */
-  line-height: 1.6; /* ارتفاع السطر للنصوص */
-  margin-top: 0px; /* المسافة بين الفقرات */
+  font-size: 1.2rem;
+  color: var(--light);
+  line-height: 1.6;
+  margin-top: 0px;
 }
 
-.color-whit{
-
-  font-size: 1.2rem; /* حجم الخط للنصوص */
-  color: var(--light); /* لون النص الأساسي */
-  line-height: 1.6; /* ارتفاع السطر للنصوص */
-  margin-top: 0px; /* المسافة بين الفقرات */
-
+.color-whit {
+  font-size: 1.2rem;
+  color: var(--light);
+  line-height: 1.6;
+  margin-top: 0px;
 }
 
-
-/* تنسيق الزر بشكل عام */
 .btn {
-  display: inline-block; /* يجعل الزر يظهر ككتلة مدمجة */
-  padding: 12px 24px; /* إضافة مسافة داخلية للزر */
-  font-size: 1.1rem; /* تحديد حجم الخط في الزر */
-  font-weight: bold; /* جعل النص في الزر غامق */
-  text-align: center; /* محاذاة النص في الزر */
-  color: var(--white); /* تحديد لون النص داخل الزر */
-  background-color:#ff5722 ; /* لون خلفية الزر */
-  border: none; /* إزالة الحدود الافتراضية للزر */
-  border-radius: 8px; /* زوايا دائرية للزر */
-  transition: all 0.3s ease-in-out; /* تأثير انتقالي عند التفاعل مع الزر */
-  cursor: pointer; /* تغيير شكل المؤشر عند التمرير فوق الزر */
-  text-decoration: none; /* إزالة أي خطوط تحت النص */
- margin-top: 50px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للزر */
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--white);
+  background-color: #ff5722;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* تأثير عند التمرير فوق الزر */
 .btn:hover {
-  background-color: var(--green); /* تغيير لون الخلفية عند التمرير */
-  transform: scale(1.05); /* تكبير الزر قليلاً عند التمرير */
-  
+  background-color: var(--green);
+  transform: scale(1.05);
 }
-
-
-
-
