@@ -1,0 +1,323 @@
+
+:root {
+  /* CSS Variables */
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: var(--blue);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--yellow);
+  --danger: var(--red);
+  --light: #f8f9fa;
+  --dark: var(--gray-dark);
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--dark);
+  color: var(--dark);
+}
+
+
+/* Main Section */
+main {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+main img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Pet Orders Section */
+.all-of-orders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.order {
+  background-color: var(--dark);
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  
+  
+}
+
+.order:hover {
+  transform: scale(1.05);
+  background-color: var(--dark);
+}
+
+.order img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px var(--dark);
+}
+
+/* Pet Details Section */
+.details {
+  padding: 20px;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Pet Details */
+.details:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animal Name Styling */
+.details p.name {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2C3E50;
+  margin-bottom: 15px;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+/* Animal Age Styling */
+.details p.age {
+  font-size: 16px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.details p.age strong {
+  color: #333;
+}
+
+/* Animal Breed Styling */
+.details p.breed {
+  font-size: 16px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.details p.breed strong {
+  color: #333;
+}
+
+/* Animal Features Styling */
+.details p.features {
+  font-size: 16px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.details p.features strong {
+  color: #333;
+}
+
+/* Animal Location Styling */
+.details p.location {
+  font-size: 16px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.details p.location strong {
+  color: #333;
+}
+
+/* Adopt Now Button Styling */
+.adopt-btn {
+  background-color: #ff5722;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  width: 90%;
+  margin-top: 15px;
+}
+/* Hover effect for Adopt Now Button */
+.adopt-btn:hover {
+  background-color: #ff501b;
+  transform: scale(1.05);
+}
+
+/* Focus effect for the Adopt Now button */
+.adopt-btn:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ff501b;
+}
+
+
+
+.adopted-message {
+  background-color: green;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 15px; /* إضافة تأثير ظل بسيط */
+}
+
+.adopted-message input {
+  margin-right: 10px; /* زيادة المسافة بين المربع والنص */
+  accent-color: white; /* تغيير لون مربع الاختيار */
+}
+
+.hidden {
+  display: none; /* إخفاء العنصر */
+}
+
+
+
+.adopt-btn:hover {
+  background-color: #45a049;
+}
+
+
+
+.adoption-list .count {
+  background-color: #ff5722;  /* اللون الذي تريده */
+  color: white;
+  border-radius: 50%;         /* تحويل العدد إلى دائرة */
+  width: 30px;               /* عرض الدائرة */
+  height: 30px;              /* ارتفاع الدائرة */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;           /* حجم الخط داخل الدائرة */
+  margin-left: 8px;  
+       /* مسافة بين النص والعدد */
+       
+}
+
+
+
+
+
+/* مظهر الخصائص */
+.characteristics {
+  font-weight: bold;
+  color: #2E8B57; /* اللون الأخضر المميز */
+  background-color: #f0f8ff; /* خلفية لونية هادئة */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px; /* حجم الخط */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+  text-align: center; 
+   margin-bottom: 30px;
+}
+
+/* مظهر السجلات الطبية */
+.medicalRecords{
+  font-weight: bold;
+  color: #B22222; /* اللون الأحمر المميز */
+  background-color: #fff0f0; /* خلفية لونية فاتحة */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px; /* حجم الخط */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 22em;
+  max-width: 80%;
+  padding: 2em 0;
+  background: #FFF;
+  box-shadow: 0 0 6px 0 rgba(32, 32, 36, 0.12);
+  border-radius: 10px; /* لإعطاء الكارد زوايا مدورة */
+  transition: all 0.35s ease;
+}
+
+.card .logo {
+  margin: 0 0 1em;
+  width: 10.625em;
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  width: 24em;
+  box-shadow: 0 10px 20px 0 rgba(32, 32, 36, 0.12);
+  transform: scale(1.05); /* إضافة تأثير التوسع عند المرور */
+}
+
+.card:hover .logo {
+  margin-bottom: 0.5em;
+  color: #FF5722; /* تغيير اللون عند المرور */
+}
+
+.card .hover_content {
+  overflow: hidden;
+  max-height: 0;
+  transform: translateY(1em);
+  transition: all 0.55s ease;
+  opacity: 0; /* إخفاء المحتوى في البداية */
+}
+
+.card:hover .hover_content {
+  max-height: 10em;
+  opacity: 1; /* إظهار المحتوى تدريجياً */
+  transform: none;
+}
+
+.card .hover_content p {
+  margin: 1.5em 0 0;
+  color: #6E6E70;
+  line-height: 1.4em;
+  font-size: 1.2em; /* زيادة حجم النص */
+}

@@ -1,0 +1,286 @@
+:root {
+  /* CSS Variables */
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: var(--blue);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--yellow);
+  --danger: var(--red);
+  --light: #f8f9fa;
+  --dark: var(--gray-dark);
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  font-weight: 400;
+  font-family: var(--font-family-sans-serif);
+  background-image: url(https://petrehomer.org/media/veafvcpx/headerbanner-1.jpg);
+  font-size: 16px;
+  line-height: 1.642;
+  color: var(--gray);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative; /* Ensures the section can appear below the background image */
+  z-index: 1; /* Ensures that the background image is beneath the section */
+}
+
+.photo {
+  position: relative; /* يتيح لك وضع العناصر داخل الصورة */
+}
+
+.img-dog {
+  width: 100%;
+  height: auto;
+}
+
+.col-12 {
+display: flex;
+gap: 50px;
+justify-content: center;
+margin-top: 100px;
+margin-bottom:100px ;
+
+}
+
+.heroButton {
+  display: flex;
+  position: relative;
+  margin: 20px 0;
+  max-width: 500px;
+  padding: 20px;
+  background-color:#28a745 ;
+  border: 2px solid var(--gray);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+  color: var(--light);
+  z-index: 3; /* يجعل الأزرار تظهر فوق الخلفية */
+}
+
+.heroButton__anchor {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* انتقال سلس */
+}
+
+/* تأثير عند التمرير */
+.heroButton__anchor:hover {
+  transform: scale(1.1); /* تكبير الأزرار قليلاً عند التمرير */
+  background-color: rgba(0, 0, 0, 0.15); /* خلفية داكنة أخف عند التمرير */
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15); /* إضافة ظل لمزيد من العمق */
+}
+
+/* تأثير عند الضغط */
+.heroButton__anchor:active {
+  transform: scale(0.95); /* تصغير الأزرار عند الضغط */
+  background-color: rgba(0, 0, 0, 0.2); /* خلفية داكنة عند الضغط */
+}
+
+.heroButton__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.heroButton img {
+  max-width: 120px;
+  height: auto;
+  padding: 10px;
+  background-color: var(--green); /* إضافة خلفية خضراء */
+  border-radius: 8px; /* حواف مستديرة للصورة */
+}
+
+.heroButton__content {
+  text-align: left;
+  
+}
+
+.heroButton__content h3 {
+  margin: 0;
+  font-size: 1.6rem; /* زيادة حجم الخط */
+  font-weight: bold;
+  color: black; /* لون أكثر وضوحًا */
+}
+
+.heroButton__content p {
+  margin: 8px 0 0; /* إضافة مساحة بين العنوان والنص */
+  font-size: 1.1rem; /* حجم خط أكبر */
+  color: var(--gray-dark);
+  line-height: 1.6; /* زيادة ارتفاع السطر */
+}
+
+
+
+
+
+/* تغيير ترتيب العناصر في .description لتكون بجانب بعض */
+.description {
+  margin-top:50px ;
+  display: flex; /* استخدام flexbox */
+  flex-direction: row; /* ترتيب العناصر بشكل أفقي */
+  gap: 200px; /* المسافة بين العناصر */
+  justify-content: center; /* محاذاة العناصر في المنتصف */
+  flex-wrap: wrap; /* يسمح بانتقال العناصر إلى السطر التالي إذا لم يكن هناك مساحة كافية */
+}
+
+/* تصميم العنصر داخل .des */
+.des {
+  display: flex;
+  flex-direction: column; /* ترتيب المحتوى داخل .des بشكل عمودي */
+  align-items: center; /* محاذاة المحتوى في الوسط */
+  text-align: center; /* جعل النص في المنتصف */
+  background-color: #f9f9f9; /* خلفية فاتحة */
+  border: 1px solid #ddd; /* تحديد الحدود */
+  padding: 20px; /* المسافات داخل البوكس */
+  border-radius: 10px; /* زوايا دائرية */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+  
+  width: auto; /* العرض يتناسب مع المحتوى */
+  max-width: 350px; /* الحد الأقصى للعرض */
+  
+  transition: transform 0.3s ease-in-out; /* تأثير التحويل عند التمرير */
+}
+
+/* تأثير التمرير على العنصر */
+.des:hover {
+  transform: translateY(-5px); /* تأثير عند التمرير فوق البوكس */
+}
+
+/* تصميم الصورة داخل .des */
+.des img {
+  width: 150px; /* تحديد عرض الصورة */
+  height: 150px; /* تحديد ارتفاع الصورة */
+  margin-bottom: 15px; /* المسافة بين الصورة والنص */
+  background-color: #28a745; /* خلفية خضراء */
+  border-radius: 50%; /* جعل الصورة دائرية */
+}
+
+/* تصميم القسم التفاصيل داخل .des */
+.details h4  {
+  padding: 10px;
+  color:black ;
+}
+.details p  {
+  padding: 10px;
+  color:var(--gray-dark) ;
+  font-size: large;
+  font: var(--font-family-monospace);
+}
+.start-partners p{
+  color:black;
+
+
+}
+/* تنسيق العناوين داخل .des */
+h4 {
+  font-size: 1.2em; /* تكبير حجم العنوان */
+  margin-bottom: 10px;
+  color: #333; /* تغيير لون العنوان */
+}
+
+/* تنسيق القائمة */
+ul {
+  list-style-type: none; /* إزالة الرموز النقطية */
+  padding-left: 0; /* إزالة المسافة الداخلية في القائمة */
+}
+
+ul li {
+  margin-bottom: 5px; /* المسافة بين العناصر في القائمة */
+}
+
+section {
+  background-color: var(--purple); /* يمكن تغيير الخلفية إلى اللون الذي تفضله */
+  padding: 50px 15px; /* المسافات الداخلية حول المحتوى */
+  margin-top: 20px; /* المسافة بين القسم والجزء العلوي */
+  display: flex; /* جعل المحتوى يظهر باستخدام Flexbox */
+  flex-direction: column; /* ترتيب المحتوى بشكل عمودي */
+  align-items: center; /* محاذاة المحتوى في الوسط */
+  justify-content: center; /* محاذاة العناصر أفقياً في المنتصف */
+  text-align: center; /* جعل النص في المنتصف */
+  border-radius: 10px; /* زوايا دائرية للقسم */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للقسم */
+  
+}
+section h4 {
+  font-size: 40px; /* Increased font size */
+  color: black;  /* Keep the text color as dark */
+  margin-bottom: 0px;
+}
+
+
+
+
+
+section p {
+  font-size: 1.2rem; /* حجم الخط للنصوص */
+  color: var(--light); /* لون النص الأساسي */
+  line-height: 1.6; /* ارتفاع السطر للنصوص */
+  margin-top: 0px; /* المسافة بين الفقرات */
+}
+
+.color-whit{
+
+  font-size: 1.2rem; /* حجم الخط للنصوص */
+  color: var(--light); /* لون النص الأساسي */
+  line-height: 1.6; /* ارتفاع السطر للنصوص */
+  margin-top: 0px; /* المسافة بين الفقرات */
+
+}
+
+
+/* تنسيق الزر بشكل عام */
+.btn {
+  display: inline-block; /* يجعل الزر يظهر ككتلة مدمجة */
+  padding: 12px 24px; /* إضافة مسافة داخلية للزر */
+  font-size: 1.1rem; /* تحديد حجم الخط في الزر */
+  font-weight: bold; /* جعل النص في الزر غامق */
+  text-align: center; /* محاذاة النص في الزر */
+  color: var(--white); /* تحديد لون النص داخل الزر */
+  background-color:#ff5722 ; /* لون خلفية الزر */
+  border: none; /* إزالة الحدود الافتراضية للزر */
+  border-radius: 8px; /* زوايا دائرية للزر */
+  transition: all 0.3s ease-in-out; /* تأثير انتقالي عند التفاعل مع الزر */
+  cursor: pointer; /* تغيير شكل المؤشر عند التمرير فوق الزر */
+  text-decoration: none; /* إزالة أي خطوط تحت النص */
+ margin-top: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف للزر */
+}
+
+/* تأثير عند التمرير فوق الزر */
+.btn:hover {
+  background-color: var(--green); /* تغيير لون الخلفية عند التمرير */
+  transform: scale(1.05); /* تكبير الزر قليلاً عند التمرير */
+  
+}
+
+
+
+

@@ -1,0 +1,437 @@
+
+
+:root {
+  /* CSS Variables */
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: var(--blue);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--yellow);
+  --danger: var(--red);
+  --light: #f8f9fa;
+  --dark: var(--gray-dark);
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+
+
+
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--dark);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1000px;
+  background: #1E2029;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  background: url('https://source.unsplash.com/800x800/?desert,landscape') no-repeat center center/cover;
+  position: relative;
+}
+
+.left-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
+}
+
+.overlay h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/* From Uiverse.io by Jedi-hongbin */ 
+/* محاذاة الزر داخل .btn-back */
+.btn-back {
+  display: flex;
+  justify-content: center; /* محاذاة الزر في المنتصف أفقيًا */
+  align-items: center; /* محاذاة الزر في المنتصف عموديًا */
+  margin: 20px 0; /* إضافة مسافة بين الزر والعناصر الأخرى */
+  margin-bottom: 80px;
+}
+
+/* تنسيق الزر */
+button {
+  display: flex;
+  align-items: center; /* محاذاة المحتويات عموديًا */
+  justify-content: center; /* محاذاة المحتويات أفقيًا */
+  height: 3em;
+  width: 100px;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+  background: #fff;
+  text-align: center; /* محاذاة النص إلى المنتصف */
+}
+
+
+
+/* تنسيق الأيقونة داخل الزر */
+button > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+}
+
+button:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+}
+
+button:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+}
+
+
+a {
+  text-decoration: none; /* إلغاء الخط تحت الرابط */
+}
+
+.button-btn {
+  background-color: #9B7AFF;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #9B7AFF;
+}
+
+p a {
+  color: #9B7AFF;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #7f5fe8;
+}
+
+p a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #7f5fe8;
+  transition: width 0.3s ease;
+}
+
+p a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #7f5fe8;
+  transition: width 0.3s ease;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  background: #2E2F3E;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 0 8px rgba(155, 122, 255, 0.8);
+  background: #353746;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.terms input {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #9B7AFF;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #7f5fe8;
+  box-shadow: 0 4px 12px rgba(155, 122, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.divider {
+  text-align: center;
+  position: relative;
+  margin: 20px 0;
+  color: #777;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #444;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-buttons button {
+  flex: 1;
+  background: #444;
+  margin: 0 5px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-toggle {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.form-toggle a {
+  color: #9B7AFF;
+  cursor: pointer;
+}
+
+/* Forgot Password Section */
+
+
+.forgot-password-section h3 {
+  color: #9B7AFF;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.forgot-password-section p {
+  color: #bbb;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.forgot-password-section a {
+  
+  color: #9B7AFF;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-section a:hover {
+  color: #7f5fe8;
+}
+
+/* Enhanced Email Input */
+.email-input {
+  background-color: #2E2F3E;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.email-input:focus {
+  background-color: #353746;
+  box-shadow: 0 0 8px rgba(155, 122, 255, 0.8);
+  border-color: #9B7AFF;
+  outline: none;
+}
+
+
+
+
+ 
+
+input.lastName{
+  width: 50%;
+}
+
+input.firstName{
+  width: 50%;
+}
+
+
+
+
+/* تأثير الصورة عند التحميل */
+.left-section .overlay .about-thumb img {
+  width: 100%;
+  height: auto; /* تأكد من أن الصورة تحتفظ بالنسبة الصحيحة */
+  object-fit: cover; /* التأكد من ملء الصورة للمساحة */
+  clip-path: inset(10% 10% 10% 10%); /* قص الصورة بنسبة 10% من جميع الأطراف */
+  transition: all 0.5s ease; /* تأثيرات سلسة للتغيير */
+}
+
+/* تأثير التحجيم عند التمرير فوق الصورة */
+.left-section .overlay .about-thumb img:hover {
+  transform: scale(1.1); /* تكبير الصورة عند التمرير */
+  clip-path: inset(0%); /* إزالة القص عند التمرير لتظهر الصورة كاملة */
+}
+
+/* إضافة تأثير دوران للصورة */
+.left-section .overlay .about-thumb img {
+  transition: transform 0.5s ease;
+}
+
+.left-section .overlay .about-thumb img:hover {
+  transform: scale(1.1) rotate(5deg); /* تكبير الصورة مع دوران خفيف */
+}
+
+/* عند التمرير، ستصبح الصورة مشعة قليلاً */
+.left-section .overlay .about-thumb img:hover {
+  filter: brightness(1.2); /* زيادة السطوع عند التمرير */
+}
+
+/* التأثيرات عند التحميل */
+.left-section .overlay .about-thumb img {
+  opacity: 0;
+  transform: translateY(30px); /* تحريك الصورة إلى أسفل */
+  animation: fadeIn 1s forwards; /* التأثير عند التحميل */
+}
+
+/* تأثير fadeIn لتحريك الصورة عند التحميل */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* استجابة للأجهزة الصغيرة */
+@media (max-width: 768px) {
+  .left-section .overlay .about-thumb img {
+    max-height: 300px; /* تقليص حجم الصورة عند الأجهزة الصغيرة */
+  }
+}
+
+
+
+

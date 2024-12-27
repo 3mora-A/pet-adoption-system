@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/list-pet.css">
+    <script src="scripts/data.js"></script>
+    <script src="scripts/list-pet.js"></script>
+    <title>Pet Adoption System</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html">Home</a>
+    <a href="Adopt.html">Find a Pet</a>
+    <a href="list-pet.html">List a Pet</a>
+    <a href="adoption-list.html" class="adoption-list">Adoption List</a>
+    <a href="about.html">About Us</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="sign-in.html" class="sign-in login-btn">Sign In</a>
+</header>
+
+
+
+    
+
+
+<div class="profile__section">
+    <img class="image" src="https://a.storyblok.com/f/152976/2114x796/5c9de8eb65/pet-medical-records-1.png/m/1050x390/filters:format(webp):quality(75)" alt="Pet Medical Records">
+    <form id="petForm">
+        <!-- Photos Section -->
+        <legend class="profile__section-title">Photos</legend>
+        <div class="col-sm-7">
+            <div class="form-group required">
+                <div class="profile">You can add pet photos (.url). For the best results.</div> <br>
+                <label for="photoURL">Upload Image URL:</label>
+                <div class="dropdown">
+                    <input id="photoURL" name="photoURL" type="text" class="form-control Discription" placeholder="URL Photo Link"
+                      pattern="https://.*" title="Enter a valid URL starting with https://" required>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Characteristics Section -->
+        <legend class="profile__section-title">Characteristics</legend>
+        <br>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group required">
+                    <label for="PetName">Pet's Name</label>
+                    <input id="PetName" name="PetName" class="form-control" placeholder="Name" pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" required>
+                </div>
+            </div>
+    
+            <div class="col-sm-6">
+                <div class="form-group required">
+                    <label for="Birthdate">Birthdate</label>
+                    <input id="Birthdate" name="Birthdate" class="form-control" type="date" required>
+                </div>
+            </div>
+    
+            <div class="col-sm-6">
+                <div class="form-group required">
+                    <label for="Kind">Kind</label>
+                    <input id="Kind" name="Kind" class="form-control" placeholder="Kind" pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" required>
+                </div>
+            </div>
+    
+            <div class="col-sm-6">
+                <div class="form-group required">
+                    <label for="Gender">Gender</label>
+                    <select id="Gender" name="Gender" class="selectpicker w100 show-tick" required>
+                        <option value="0" selected="selected">Nothing selected</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <!-- City Input -->
+            <div class="col-sm-6">
+                <div class="form-group required">
+                    <label for="City">City</label>
+                    <input id="City" name="City" class="form-control" placeholder="City" pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" required>
+                </div>
+            </div>
+
+            <!-- Street Input -->
+            <div class="col-sm-6">
+                <div class="form-group required">
+                    <label for="Street">Street</label>
+                    <input id="Street" name="Street" class="form-control" placeholder="Street" pattern="[A-Za-z0-9\s,]+" title="Only letters, numbers, and spaces are allowed" required>
+                </div>
+            </div>
+
+            <!-- Breed Input -->
+            <div class="col-sm-6">
+                <div class="form-group required">
+                    <label for="Breed">Breed</label>
+                    <input id="Breed" name="Breed" class="form-control" placeholder="Breed" pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" required>
+                </div>
+            </div>
+    
+            <div class="col-sm-6">
+                <div class="form-group required">
+                    <label for="Description">Description</label>
+                    <input id="Description" name="Description" type="text" class="form-control Description" placeholder="Description" pattern=".{1,}" title="Description must be at least 10 characters long" required>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Medical Records Section -->
+        <legend class="profile__section-title">Medical Records</legend>
+        <br>
+        <div class="col-sm-7">
+            <div class="form-group required">
+                <div class="profile">You can add Previous Diseases or Surgeries. About the pet if any.</div>
+                <label for="MedicalDescription">Medical Description</label>
+                <input id="MedicalDescription" name="MedicalDescription" type="text" class="form-control Discription" placeholder="Description" pattern=".{10,}" title="Description must be at least 10 characters long">
+            </div>
+        </div>
+    
+        <!-- Button to add a pet -->
+        <div class="col-sm-7 btn-add">
+            <div class="form-group required">
+                
+                <button  type="submit" class="btn btn-primary" onclick="addPet()">Add Pet</button>
+            </div>
+        </div>
+    </form>
+    
+    
+
+</body>
+</html>

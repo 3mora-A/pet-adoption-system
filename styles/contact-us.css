@@ -1,0 +1,198 @@
+ 
+ 
+ :root {
+  /* CSS Variables */
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: var(--blue);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--yellow);
+  --danger: var(--red);
+  --light: #f8f9fa;
+  --dark: var(--gray-dark);
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+ 
+ /* General Styles */
+ body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--dark);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+/* Form Wrapper */
+.form-wrapper {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+}
+
+/* Heading */
+.h4 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  font-size: 1em;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Input and Select Styles */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0 12px 0;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Custom Checkbox */
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.custom-control-label {
+  font-size: 0.95em;
+  color: #666;
+  display: inline-block;
+  padding-left: 30px;
+  position: relative;
+}
+
+.custom-control-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid #007bff;
+  background-color: #fff;
+}
+
+/* Select Dropdown */
+.ui_kit_select_box select {
+  padding: 12px;
+  font-size: 1em;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+}
+
+.ui_kit_select_box .btn {
+  background-color: #f1f1f1;
+  border-color: #ddd;
+  color: #333;
+  font-size: 1em;
+}
+
+.ui_kit_select_box .btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Button Styles */
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Field Validation */
+.field-validation-valid,
+.field-validation-error {
+  font-size: 0.9em;
+  color: #d9534f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .col-12 {
+      margin-bottom: 15px;
+  }
+
+  .form-wrapper {
+      padding: 20px;
+  }
+
+  button[type="submit"] {
+      width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .h4 {
+      font-size: 1.1em;
+  }
+
+  label {
+      font-size: 0.95em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+      font-size: 0.9em;
+  }
+}

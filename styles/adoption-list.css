@@ -1,0 +1,165 @@
+
+:root {
+  /* CSS Variables */
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: var(--blue);
+  --secondary: var(--gray);
+  --success: var(--green);
+  --info: var(--cyan);
+  --warning: var(--yellow);
+  --danger: var(--red);
+  --light: #f8f9fa;
+  --dark: var(--gray-dark);
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+body{background-color: var(--dark);}
+/* تنسيق البطاقة */
+.order {
+  display: grid;
+  grid-template-columns: 1fr;  /* عمود واحد فقط */
+  grid-gap: 20px;  /* المسافة بين العناصر */
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  width: 320px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.order:hover {
+  transform: translateY(-5px);
+  background-color: #f1f1f1;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* تنسيق الصورة */
+.order img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.order:hover img {
+  transform: scale(1.1);
+}
+
+/* تنسيق التفاصيل */
+.details {
+  margin-top: 15px;
+  color: #333;
+}
+
+.details p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.details strong {
+  font-weight: bold;
+  color: #007BFF;
+}
+
+/* تنسيق زر "Adopt Now" */
+
+
+
+
+
+/* إظهار الرسالة عندما يتم التبني */
+
+/* تنسيق حاوية الحيوانات */
+.adoption-orders {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* محاذاة العناصر في المنتصف */
+  gap: 20px;  /* المسافة بين البطائق */
+  padding: 20px;
+  background-color: var(--dark);
+}
+
+/* إذا أردت عرض البطائق بشكل أفقي مع التمرير */
+@media (max-width: 768px) {
+  .adoption-orders {
+    flex-direction: column;  /* تغيير التوجه إلى عمودي على الشاشات الصغيرة */
+  }
+}
+
+/* مظهر الخصائص */
+.characteristics {
+  font-weight: bold;
+  color: #2E8B57; /* اللون الأخضر المميز */
+  background-color: #f0f8ff; /* خلفية لونية هادئة */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px; /* حجم الخط */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+  text-align: center; 
+   margin-bottom: 30px;
+}
+
+/* مظهر السجلات الطبية */
+.medicalRecords{
+  font-weight: bold;
+  color: #B22222; /* اللون الأحمر المميز */
+  background-color: #fff0f0; /* خلفية لونية فاتحة */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px; /* حجم الخط */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+
+
+
+.adoptedMessage {
+  font-size: 18px;                /* Font size */
+  font-weight: bold;              /* Make the text bold */
+  color: #fff;                    /* White text color */
+  background-color: #4CAF50;      /* Green background for the "Adopted" status */
+  padding: 8px 16px;              /* Padding to give it some space around the text */
+  border-radius: 8px;             /* Rounded corners */
+  text-align: center;             /* Center the text */
+  margin-top: 10px;               /* Some space from the content above */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease; /* Smooth transition when the background color changes */
+}
+
+.adoptedMessage:hover {
+  background-color: #45a049;      /* Darker green when hovered over */
+}
+
+
+
+
+
+
+
+
+
+
