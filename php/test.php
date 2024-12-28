@@ -1,16 +1,20 @@
 <?php
 
-include('db.php');
+include('db.php'); 
 
 
 $sql = "SELECT * FROM user";
 
 
-$result = $conn->query($sql);
+$stmt = $pdo->prepare($sql); 
 
 
-if ($result->num_rows > 0) {
+$stmt->execute();
+
+
+if ($stmt->rowCount() > 0) {
    
+
     echo "<table border='1'>
             <tr>
                 <th>User ID</th>
@@ -21,10 +25,10 @@ if ($result->num_rows > 0) {
                 <th>Phone Number</th>
             </tr>";
     
-   
-    while ($row = $result->fetch_assoc()) {
+  
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         echo "<tr>
-                <td>" . $row['user_id'] . "</td>
+                <td>" . htmlspecialchars($row['user_id']) . "</td>
                 <td>" . htmlspecialchars($row['username']) . "</td>
                 <td>" . htmlspecialchars($row['email']) . "</td>
                 <td>" . htmlspecialchars($row['first_name']) . "</td>
@@ -38,5 +42,5 @@ if ($result->num_rows > 0) {
 }
 
 
-$conn->close();
+$pdo = null;
 ?>
