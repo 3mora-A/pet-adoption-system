@@ -1,7 +1,7 @@
 
 
 :root {
-  /* CSS Variables */
+ 
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -32,7 +32,6 @@
 
 
 
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -55,89 +54,43 @@ body {
   display: flex;
   flex-direction: row;
   width: 90%;
-  max-width: 1000px;
+  max-width: 600px;
   background: #1E2029;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-/* Left Section */
-.left-section {
-  flex: 1;
-  background: url('https://source.unsplash.com/800x800/?desert,landscape') no-repeat center center/cover;
-  position: relative;
-}
 
-.left-section .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  padding: 20px;
-  color: #fff;
-}
+
+
+
 
 .overlay h1 {
   font-size: 2.2rem;
   margin-bottom: 10px;
 }
 
-/* From Uiverse.io by Jedi-hongbin */ 
-/* محاذاة الزر داخل .btn-back */
+
 .btn-back {
   display: flex;
-  justify-content: center; /* محاذاة الزر في المنتصف أفقيًا */
-  align-items: center; /* محاذاة الزر في المنتصف عموديًا */
-  margin: 20px 0; /* إضافة مسافة بين الزر والعناصر الأخرى */
+  justify-content: center; 
+  align-items: center; 
+  margin: 20px 0; 
   margin-bottom: 80px;
 }
 
-/* تنسيق الزر */
-button {
-  display: flex;
-  align-items: center; /* محاذاة المحتويات عموديًا */
-  justify-content: center; /* محاذاة المحتويات أفقيًا */
-  height: 3em;
-  width: 100px;
-  background-color: #eeeeee4b;
-  border-radius: 3px;
-  letter-spacing: 1px;
-  transition: all 0.2s linear;
-  cursor: pointer;
-  border: none;
-  background: #fff;
-  text-align: center; /* محاذاة النص إلى المنتصف */
-}
 
 
 
-/* تنسيق الأيقونة داخل الزر */
-button > svg {
-  margin-right: 5px;
-  margin-left: 5px;
-  font-size: 20px;
-  transition: all 0.4s ease-in;
-}
 
-button:hover > svg {
-  font-size: 1.2em;
-  transform: translateX(-5px);
-}
 
-button:hover {
-  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
-  transform: translateY(-2px);
-}
+
+
 
 
 a {
-  text-decoration: none; /* إلغاء الخط تحت الرابط */
+  text-decoration: none; 
 }
 
 .button-btn {
@@ -152,7 +105,6 @@ a {
   width: 100%;
 }
 
-/* Right Section */
 .right-section {
   flex: 1;
   padding: 40px;
@@ -313,7 +265,7 @@ button:hover {
   cursor: pointer;
 }
 
-/* Forgot Password Section */
+
 
 
 .forgot-password-section h3 {
@@ -341,7 +293,6 @@ button:hover {
   color: #7f5fe8;
 }
 
-/* Enhanced Email Input */
 .email-input {
   background-color: #2E2F3E;
   padding: 12px 15px;
@@ -377,43 +328,43 @@ input.firstName{
 
 
 
-/* تأثير الصورة عند التحميل */
+
 .left-section .overlay .about-thumb img {
   width: 100%;
-  height: auto; /* تأكد من أن الصورة تحتفظ بالنسبة الصحيحة */
-  object-fit: cover; /* التأكد من ملء الصورة للمساحة */
-  clip-path: inset(10% 10% 10% 10%); /* قص الصورة بنسبة 10% من جميع الأطراف */
-  transition: all 0.5s ease; /* تأثيرات سلسة للتغيير */
+  height: auto; 
+  object-fit: cover; 
+  clip-path: inset(10% 10% 10% 10%); 
+  transition: all 0.5s ease;
 }
 
-/* تأثير التحجيم عند التمرير فوق الصورة */
+
 .left-section .overlay .about-thumb img:hover {
-  transform: scale(1.1); /* تكبير الصورة عند التمرير */
-  clip-path: inset(0%); /* إزالة القص عند التمرير لتظهر الصورة كاملة */
+  transform: scale(1.1); 
+  clip-path: inset(0%); 
 }
 
-/* إضافة تأثير دوران للصورة */
+
 .left-section .overlay .about-thumb img {
   transition: transform 0.5s ease;
 }
 
 .left-section .overlay .about-thumb img:hover {
-  transform: scale(1.1) rotate(5deg); /* تكبير الصورة مع دوران خفيف */
+  transform: scale(1.1) rotate(5deg); 
 }
 
-/* عند التمرير، ستصبح الصورة مشعة قليلاً */
+
 .left-section .overlay .about-thumb img:hover {
-  filter: brightness(1.2); /* زيادة السطوع عند التمرير */
+  filter: brightness(1.2); 
 }
 
-/* التأثيرات عند التحميل */
+
 .left-section .overlay .about-thumb img {
   opacity: 0;
-  transform: translateY(30px); /* تحريك الصورة إلى أسفل */
-  animation: fadeIn 1s forwards; /* التأثير عند التحميل */
+  transform: translateY(30px); 
+  animation: fadeIn 1s forwards; 
 }
 
-/* تأثير fadeIn لتحريك الصورة عند التحميل */
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -425,10 +376,10 @@ input.firstName{
   }
 }
 
-/* استجابة للأجهزة الصغيرة */
+
 @media (max-width: 768px) {
   .left-section .overlay .about-thumb img {
-    max-height: 300px; /* تقليص حجم الصورة عند الأجهزة الصغيرة */
+    max-height: 300px; 
   }
 }
 

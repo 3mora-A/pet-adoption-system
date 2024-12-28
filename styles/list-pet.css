@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: var(--dark);
+  background-color: var(--gray-dark);
   font-family: var(--font-family-sans-serif);
   margin: 0;
   padding: 0;
@@ -32,12 +32,12 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* General Profile Section Styles */
+
 .profile__section {
   margin-bottom: 40px;
   padding: 30px;
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
+  border: 1px solid #1e2029;
+  background-color: #1e2029;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
   width: 100%;
@@ -54,7 +54,7 @@ body {
 .profile__section-title {
   font-size: 1.8rem;
   font-weight: 600;
-  color: var(--gray-dark);
+  color: white;
   margin-bottom: 25px;
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 10px;
@@ -82,12 +82,44 @@ label {
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 10px;
-  color: var(--gray-dark);
+  color: white;
   display: block; /* Ensure label is on a separate line */
 }
+input,select  {
+  background: #2E2F3E;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  color:#aaa;
+  transition: all 0.3s ease;
+  outline: none;
+}
+label.MedicalDescription{
+
+margin-top: 30px;
+}
+
+
+input:focus {
+  box-shadow: 0 0 8px rgba(155, 122, 255, 0.8);
+  background: #353746;
+}
+.selectpicker:focus{
+  box-shadow: 0 0 8px rgba(155, 122, 255, 0.8);
+  background: #353746;
+}
+select:focus{
+  box-shadow: 0 0 8px rgba(155, 122, 255, 0.8);
+  background: #353746;
+}
+
+input,select:placeholder {
+  color: #aaa;
+}
+
 
 input.form-control,
-select.selectpicker {
+select.selectpicker,#Gernder {
   width: 100%;
   padding: 14px;
   font-size: 1rem;
@@ -96,18 +128,17 @@ select.selectpicker {
   outline: none;
   box-sizing: border-box;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #2e2f3e;
+  border: var(--gray-dark);
+
 }
 
-input.form-control:focus,
-select.selectpicker:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Blue focus outline */
-}
 
 
 
 input.form-control {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  
 }
 input.form-control.url-image {
   
@@ -115,6 +146,10 @@ input.form-control.url-image {
 
 }
 
+input:focus {
+  box-shadow: 0 0 8px rgba(155, 122, 255, 0.8);
+  background: #353746;
+}
 
 .help-text p {
   font-size: 0.9rem;
@@ -122,20 +157,9 @@ input.form-control.url-image {
   margin-top: 5px;
 }
 
-button.submit-btn {
-  padding: 12px 25px;
-  background-color: var(--blue);
-  color: #fff;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-button.submit-btn:hover {
-  background-color: #0056b3; /* Darken blue on hover */
-}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -149,6 +173,7 @@ button.submit-btn:hover {
 
   .profile__section-title {
     font-size: 1.5rem;
+    
   }
 
   .row {
@@ -160,35 +185,34 @@ button.submit-btn:hover {
 
 /* Button Style */
 .btn-primary {
-  background-color: #ff5722; /* Orange color */
-  color: #fff; /* White text */
-  border: 1px solid #ff5722; /* Border matching the background */
-  padding: 10px 20px; /* Padding for size */
-  font-size: 16px; /* Font size */
-  font-weight: bold; /* Bold text */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: all 0.3s ease; /* Smooth transition for hover effects */
-  
+  background-color: #9B7AFF;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 500px;
+}
+.btn-primary:hover {
+  background-color: #7f5fe8;
+  box-shadow: 0 4px 12px rgba(155, 122, 255, 0.4);
+  transform: scale(1.05);
 }
 
-/* Button Hover Effect */
-.btn-primary:hover {
-  background-color: #e64a19; /* Darker orange on hover */
-  border-color: #e64a19; /* Darker border */
-  transform: scale(1.05); /* Slightly enlarge the button */
-}
 
 /* Button Focus Effect */
 .btn-primary:focus {
   outline: none; /* Remove the default focus outline */
-  box-shadow: 0 0 5px rgba(255, 87, 34, 0.5); /* Orange glow effect */
+  box-shadow: 0 0 5px rgba(155, 122, 255, 0.4); /* Orange glow effect */
 }
 
 .btn-add{
 
   display: flex;
-  justify-content: right;
+  justify-content:center;
+  margin-top: 60px;
 }
 
 
@@ -200,4 +224,8 @@ button.submit-btn:hover {
   margin-top: 20px;
   text-align: center;
   border-radius: 5px;
+}
+
+.profile{
+  color: white;
 }

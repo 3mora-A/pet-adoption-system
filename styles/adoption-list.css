@@ -1,6 +1,6 @@
 
 :root {
-  /* CSS Variables */
+
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -28,11 +28,11 @@
 
 
 body{background-color: var(--dark);}
-/* تنسيق البطاقة */
+
 .order {
   display: grid;
-  grid-template-columns: 1fr;  /* عمود واحد فقط */
-  grid-gap: 20px;  /* المسافة بين العناصر */
+  grid-template-columns: 1fr; 
+  grid-gap: 20px;  
   border: 2px solid #ddd;
   border-radius: 12px;
   width: 320px;
@@ -50,7 +50,6 @@ body{background-color: var(--dark);}
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* تنسيق الصورة */
 .order img {
   width: 100%;
   height: 200px;
@@ -63,7 +62,6 @@ body{background-color: var(--dark);}
   transform: scale(1.1);
 }
 
-/* تنسيق التفاصيل */
 .details {
   margin-top: 15px;
   color: #333;
@@ -80,55 +78,53 @@ body{background-color: var(--dark);}
   color: #007BFF;
 }
 
-/* تنسيق زر "Adopt Now" */
 
 
 
 
 
-/* إظهار الرسالة عندما يتم التبني */
 
-/* تنسيق حاوية الحيوانات */
+
+
 .adoption-orders {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* محاذاة العناصر في المنتصف */
-  gap: 20px;  /* المسافة بين البطائق */
+  justify-content: center; 
+  gap: 20px; 
   padding: 20px;
   background-color: var(--dark);
 }
 
-/* إذا أردت عرض البطائق بشكل أفقي مع التمرير */
+
 @media (max-width: 768px) {
   .adoption-orders {
-    flex-direction: column;  /* تغيير التوجه إلى عمودي على الشاشات الصغيرة */
+    flex-direction: column; 
   }
 }
 
-/* مظهر الخصائص */
 .characteristics {
   font-weight: bold;
-  color: #2E8B57; /* اللون الأخضر المميز */
-  background-color: #f0f8ff; /* خلفية لونية هادئة */
+  color: #2E8B57; 
+  background-color: #f0f8ff;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
-  font-size: 16px; /* حجم الخط */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+  font-size: 16px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
   text-align: center; 
    margin-bottom: 30px;
 }
 
-/* مظهر السجلات الطبية */
+
 .medicalRecords{
   font-weight: bold;
-  color: #B22222; /* اللون الأحمر المميز */
-  background-color: #fff0f0; /* خلفية لونية فاتحة */
+  color: #B22222; 
+  background-color: #fff0f0; 
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 10px;
-  font-size: 16px; /* حجم الخط */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* تأثير الظل */
+  font-size: 16px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
   text-align: center;
   margin-bottom: 30px;
   margin-top: 30px;
@@ -138,20 +134,20 @@ body{background-color: var(--dark);}
 
 
 .adoptedMessage {
-  font-size: 18px;                /* Font size */
-  font-weight: bold;              /* Make the text bold */
-  color: #fff;                    /* White text color */
-  background-color: #4CAF50;      /* Green background for the "Adopted" status */
-  padding: 8px 16px;              /* Padding to give it some space around the text */
-  border-radius: 8px;             /* Rounded corners */
-  text-align: center;             /* Center the text */
-  margin-top: 10px;               /* Some space from the content above */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  transition: background-color 0.3s ease; /* Smooth transition when the background color changes */
+  font-size: 18px;                
+  font-weight: bold;             
+  color: #fff;                    
+  background-color: #4CAF50;    
+  padding: 8px 16px;             
+  border-radius: 8px;             
+  text-align: center;            
+  margin-top: 10px;              
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; 
 }
 
 .adoptedMessage:hover {
-  background-color: #45a049;      /* Darker green when hovered over */
+  background-color: #45a049;     
 }
 
 

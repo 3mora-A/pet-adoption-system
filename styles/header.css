@@ -88,11 +88,7 @@ header a:last-child:hover {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 .adoption-list .count {
   background-color: #ff5722;
