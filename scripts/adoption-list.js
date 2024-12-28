@@ -3,21 +3,21 @@ console.log('adoptionList', adoptionList);
 const adoptionOrders = document.querySelector(".adoption-orders");
 
 adoptionList.forEach(animal => {
-  // التحقق من صحة البيانات
+  
   console.log('Animal Data:', animal);
 
   const imgElement = document.createElement("img");
   imgElement.src = animal.image;
 
-  // التعامل مع الخطأ في حال كانت الصورة غير موجودة
+ 
   imgElement.onerror = () => {
-    imgElement.src = 'default-image.jpg';  // صورة افتراضية في حال كانت الصورة غير موجودة
+    imgElement.src = 'default-image.jpg'; 
   };
 
   const details = document.createElement("div");
   details.classList.add("details");
 
-  // خصائص الحيوان
+
   const characteristics = document.createElement("p");
   characteristics.classList.add('characteristics');
   characteristics.innerHTML = `<strong>Characteristics:</strong>`;
@@ -55,7 +55,7 @@ adoptionList.forEach(animal => {
   gender.innerHTML = `<strong>Gender:</strong> ${animal.gender}`;
   details.appendChild(gender);
 
-  // التأكد من وجود سجلات طبية قبل إضافتها
+
   const medicalRecords = document.createElement("p");
   medicalRecords.classList.add('medicalRecords');
   medicalRecords.innerHTML = `<strong>Medical Records:</strong>`;
@@ -65,18 +65,17 @@ adoptionList.forEach(animal => {
   descriptionMedecal.innerHTML = `<strong>Medical Description:</strong> ${animal.descriptionMedecalRecords}`;
   details.appendChild(descriptionMedecal);
 
-  // رسالة تبني الحيوان
+ 
   const adoptedMessage = document.createElement("p");
   adoptedMessage.classList.add('adoptedMessage');
-  adoptedMessage.innerHTML = "Adopted";  // رسالة تبني
+  adoptedMessage.innerHTML = "Adopted";  
   details.appendChild(adoptedMessage);
 
-  // إضافة العناصر إلى الطلب النهائي
+ 
   const order = document.createElement("div");
   order.classList.add("order");
   order.appendChild(imgElement); 
   order.appendChild(details);
 
-  // إضافة الطلب إلى القائمة النهائية
   adoptionOrders.appendChild(order);
 });

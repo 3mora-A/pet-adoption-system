@@ -28,9 +28,9 @@
 
 
 body {
-  background-color: var(--dark); /* الخلفية الداكنة للصفحة */
-  color: var(--light); /* النصوص باللون الفاتح لزيادة التباين */
-  font-family: var(--font-family-sans-serif); /* استخدام الخط السلس والمناسب */
+  background-color: var(--dark); 
+  color: var(--light); 
+  font-family: var(--font-family-sans-serif); 
   margin: 0;
   padding: 0;
   display: flex;

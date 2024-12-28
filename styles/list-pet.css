@@ -1,5 +1,5 @@
 :root {
-  /* CSS Variables */
+  
   --blue: #007bff;
   --gray: #6c757d;
   --gray-dark: #343a40;
@@ -39,16 +39,16 @@ body {
   border: 1px solid #1e2029;
   background-color: #1e2029;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
   width: 100%;
-  max-width: 1000px; /* Ensure it doesn't grow too large */
-  margin: 20px auto; /* Centering the section */
+  max-width: 1000px; 
+  margin: 20px auto; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile__section:hover {
-  transform: translateY(-5px); /* Slight lift effect on hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .profile__section-title {
@@ -75,7 +75,7 @@ body {
 }
 
 .form-group {
-  margin-bottom: 30px; /* Increased space for cleaner layout */
+  margin-bottom: 30px; 
 }
 
 label {
@@ -83,7 +83,7 @@ label {
   font-weight: 500;
   margin-bottom: 10px;
   color: white;
-  display: block; /* Ensure label is on a separate line */
+  display: block; /
 }
 input,select  {
   background: #2E2F3E;
@@ -161,7 +161,6 @@ input:focus {
 
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .col-sm-6 {
     width: 100%;
@@ -183,7 +182,7 @@ input:focus {
 }
 
 
-/* Button Style */
+
 .btn-primary {
   background-color: #9B7AFF;
   border: none;
@@ -202,10 +201,9 @@ input:focus {
 }
 
 
-/* Button Focus Effect */
 .btn-primary:focus {
-  outline: none; /* Remove the default focus outline */
-  box-shadow: 0 0 5px rgba(155, 122, 255, 0.4); /* Orange glow effect */
+  outline: none; 
+  box-shadow: 0 0 5px rgba(155, 122, 255, 0.4); 
 }
 
 .btn-add{
