@@ -119,7 +119,8 @@ label ,section {
 
 
 
-input ,select ,#message{
+input ,#message{
+  max-width: 95%;
   width: 100%;
   padding: 12px;
   margin: 6px 0 12px 0;
@@ -138,7 +139,20 @@ select ,  #birth-date{
   color: #aaa;
 }
 
-
+select {
+  max-width: 100%;
+  width: 98%;
+  padding: 12px;
+  margin: 6px 0 12px 0;
+  background: #2E2F3E;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.3s ease;
+  outline: none;
+  color: #aaa;
+}
 input:focus {
   box-shadow: 0 0 8px rgba(155, 122, 255, 0.8);
   background: #353746;
@@ -220,3 +234,5 @@ text-align: center;
     font-size: 0.9em;
   }
 }
+
+
