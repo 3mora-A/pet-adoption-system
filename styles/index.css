@@ -125,10 +125,10 @@ body {
 }
 
 .heroButton:hover {
-  transform: scale(1.05); /* Slightly enlarge the button on hover */
-  background-color: rgba(255, 255, 255, .60); /* Change background color on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Enhanced shadow with larger spread */
-  cursor: pointer; /* Change the cursor to a pointer to indicate it is clickable */
+  transform: scale(1.05); 
+  background-color: rgba(255, 255, 255, .60); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); 
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -264,16 +264,16 @@ ul li {
   
   align-items: center;
   padding: 20px 50px;
-  background-color: #0a453a; /* Matches the dark green background */
+  background-color: #0a453a; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  gap: 400px; /* Adds spacing between elements */
-  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 400px; 
+  flex-wrap: wrap;
 }
 
 .start-partners h4 {
-  font-size: 2rem; /* Slightly smaller for better readability */
-  color: #fff; /* White text for contrast */
+  font-size: 2rem; 
+  color: #fff; 
   
 }
 
@@ -298,7 +298,7 @@ button {
   padding: 10px 20px;
   font-size: 1.2rem;
   color: #fff;
-  background-color: #5fa503; /* Bright green color */
+  background-color: #5fa503;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -306,12 +306,12 @@ button {
 }
 
 button:hover {
-  background-color: #4e9403; /* Slightly darker green */
+  background-color: #4e9403; 
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
-  background-color: #468203; /* Darker green when pressed */
+  background-color: #468203; 
   transform: translateY(1px);
 }
 
@@ -415,18 +415,18 @@ justify-content: center;
 
 
 .tital-description .text-center {
-  text-align: center; /* Center the text */
-  color: black; /* Set text color to black */
+  text-align: center; 
+  color: black; 
 }
 
 .tital-description h2 {
-  font-size: 3rem; /* Make h2 text bigger */
-  color: black; /* Ensure h2 text is black */
+  font-size: 3rem; 
+  color: black; 
 }
 
 .tital-description p {
-  font-size: 1.3rem; /* Make p text bigger */
-  color: black; /* Ensure p text is black */
+  font-size: 1.3rem; 
+  color: black; 
 }
 .why{
 margin-bottom: 100px ;
@@ -448,7 +448,7 @@ margin-bottom: 100px ;
 
 
 .heroButton__content h3, .heroButton__content p {
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
 }
 
 a{
@@ -458,7 +458,7 @@ a{
 
 
 
-/* Responsive Design */
+
 @media (max-width: 1200px) {
   .col-12 {
     padding-left: 50px;
@@ -547,7 +547,7 @@ a{
   }
 }
 
-/* Mobile Responsiveness (<= 480px) */
+
 @media (max-width: 480px) {
   .heroButton {
     margin: 0 auto;
