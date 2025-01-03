@@ -243,7 +243,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <button type="submit">Change Password</button>
         </form>
 
-        <p class="change-password"><a href="http://localhost/project/sign-in.html#">Back to Login</a></p>
+        <p class="change-password"><a href="http://localhost/web/sign-in.html#">Back to Login</a></p>
       </div>
     </div>
   </div>
