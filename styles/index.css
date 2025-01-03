@@ -45,7 +45,7 @@ body {
 
 
 .home-one{
-  background-image: url(https://petrehomer.org/media/veafvcpx/headerbanner-1.jpg);
+  background-image: url(/images/background.png);
 
   font-weight: 400;
   font-family: var(--font-family-sans-serif);
@@ -172,11 +172,11 @@ body {
 }
 
 .heroButton img {
-  max-width: 120px;
+  max-width: 200px;
   height: auto;
   padding: 10px;
   background-color: #5fa503;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 .heroButton .image-tow{
 
