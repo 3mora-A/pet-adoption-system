@@ -179,3 +179,5 @@ console.log('befor');
 console.log('anemal:',animal);
 console.log('AnimalDone:',AnimalDone);
 console.log('adoptionList',adoptionList)
+
+// AnimalDone.push(animal);
