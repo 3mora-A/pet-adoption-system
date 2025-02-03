@@ -41,7 +41,7 @@ updateAdoptedListText();
 const allOfOrders = document.getElementById("all-of-orders");
 
 
-AnimalDone.forEach((animal, index) => {
+animal.forEach((animal, index) => {
   
   const imgElement = document.createElement("img");
   imgElement.src = animal.image;

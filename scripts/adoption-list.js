@@ -2,7 +2,7 @@ console.log('adoptionList', adoptionList);
 
 const adoptionOrders = document.querySelector(".adoption-orders");
 
-adoptionList.forEach(animal => {
+animal.forEach(animal => {
   
   console.log('Animal Data:', animal);
 
